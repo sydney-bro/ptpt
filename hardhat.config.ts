@@ -71,8 +71,8 @@ const config: HardhatUserConfig = {
     },
     etherscan: {
         apiKey: {
-          base: "3XR33RJ7S93796KX3MC54RRK2D8ZYCW2DB",
-          polygon: "X7E5MM6Z7XNC1PB4KVJGBPQDFGVN9UB11G"
+          base: "<enter_base_api_key_here>",
+          polygon: "<enter_polygon_api_key_here>"
         },
       },
     namedAccounts: {
