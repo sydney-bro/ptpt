@@ -45,6 +45,16 @@ const config: OAppOmniGraphHardhat = {
         {
             from: baseContract,
             to: polygonContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+            },
         }
     ],
 }

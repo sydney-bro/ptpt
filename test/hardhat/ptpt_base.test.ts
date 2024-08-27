@@ -3,22 +3,22 @@ import { ethers } from 'hardhat'
 import { Options } from '@layerzerolabs/lz-v2-utilities'
 import { Address } from 'hardhat-deploy/types'
 
-describe('ptpt_adapter_test', function () {
+describe('ptpt_base_test', function () {
 
-    const eidB = 30184
+    const eidB = 30109
     let owner: Address
-    let contractName = "ptpt_adapter_polygon"
-    let contractAddress = "0xa1efa1afdcef2db851042c6c6fd4cffb8fbc7db0"
+    let contractName = "ptpt_base"
+    let contractAddress = "0x9c6d4496bDc6312AB94F1FD4295F59DF6Ed8EeE3"
 
     // A test case to verify token transfer functionality
     it('should send a token from A address to B address via each OFT', async function () {
 
         owner = "0xF3FB5608C5FAF476E48fA3639224753AA51F440e"
         // Defining the amount of tokens to send and constructing the parameters for the send operation
-        const tokensToSend = ethers.utils.parseEther('2000000')
-        const tokensToReceive = ethers.utils.parseEther('500000')
+        const tokensToSend = ethers.utils.parseEther('2500000')
+        const tokensToReceive = ethers.utils.parseEther('2500000')
         // Defining extra message execution options for the send operation
-        const options = Options.newOptions().addExecutorLzReceiveOption(300000, 0).toHex().toString()
+        const options = Options.newOptions().addExecutorLzReceiveOption(200000, 0).toHex().toString()
 
         const sendParam = [
             eidB,
