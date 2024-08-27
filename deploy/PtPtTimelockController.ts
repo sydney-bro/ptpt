@@ -2,7 +2,7 @@ import assert from 'assert'
 
 import { type DeployFunction } from 'hardhat-deploy/types'
 
-const contractName = 'ptpt_adapter_polygon'
+const contractName = 'PtPtTimelockController'
 
 const deploy: DeployFunction = async (hre) => {
     const { getNamedAccounts, deployments } = hre
@@ -31,13 +31,15 @@ const deploy: DeployFunction = async (hre) => {
     //     eid: EndpointId.AVALANCHE_V2_TESTNET
     //   }
     // }
-    const endpointV2Deployment = await hre.deployments.get('EndpointV2')
+    //const endpointV2Deployment = await hre.deployments.get('EndpointV2')
 
     const { address } = await deploy(contractName, {
         from: deployer,
         args: [
-            endpointV2Deployment.address, // LayerZero's EndpointV2 address
-            deployer, // owner
+            600, 
+            ["0xF3FB5608C5FAF476E48fA3639224753AA51F440e"],
+            ["0xF3FB5608C5FAF476E48fA3639224753AA51F440e"],
+            deployer
         ],
         log: true,
         skipIfAlreadyDeployed: true,
