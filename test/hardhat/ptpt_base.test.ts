@@ -5,7 +5,7 @@ import { Address } from 'hardhat-deploy/types'
 
 describe('ptpt_base_test', function () {
 
-    const eidB = 30109
+    const eidB = 30165
     let owner: Address
     let contractName = "ptpt_base"
     let contractAddress = "0x9c6d4496bDc6312AB94F1FD4295F59DF6Ed8EeE3"
@@ -15,8 +15,8 @@ describe('ptpt_base_test', function () {
 
         owner = "0xF3FB5608C5FAF476E48fA3639224753AA51F440e"
         // Defining the amount of tokens to send and constructing the parameters for the send operation
-        const tokensToSend = ethers.utils.parseEther('2500000')
-        const tokensToReceive = ethers.utils.parseEther('2500000')
+        const tokensToSend = ethers.utils.parseEther('250000')
+        const tokensToReceive = ethers.utils.parseEther('250000')
         // Defining extra message execution options for the send operation
         const options = Options.newOptions().addExecutorLzReceiveOption(200000, 0).toHex().toString()
 

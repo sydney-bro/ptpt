@@ -13,7 +13,7 @@ import "@nomicfoundation/hardhat-verify";
 import '@layerzerolabs/toolbox-hardhat'
 import { HardhatUserConfig, HttpNetworkAccountsUserConfig } from 'hardhat/types'
 import { EndpointId } from '@layerzerolabs/lz-definitions'
-import '../lz-genie/bin/hre';
+// import '../lz-genie/bin/hre';
 import './tasks'
 
 // Set your preferred authentication method
@@ -71,8 +71,8 @@ const config: HardhatUserConfig = {
     },
     etherscan: {
         apiKey: {
-          base: "<enter_base_api_key_here>",
-          polygon: "<enter_polygon_api_key_here>"
+          base: "3XR33RJ7S93796KX3MC54RRK2D8ZYCW2DB",
+          polygon: "X7E5MM6Z7XNC1PB4KVJGBPQDFGVN9UB11G"
         },
       },
     namedAccounts: {
